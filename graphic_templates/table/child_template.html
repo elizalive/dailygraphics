@@ -16,11 +16,11 @@
     <script>
         WebFont.load({
              custom: {
-                 families: [ 
+                 families: [
                     'Gotham SSm:n4,n7',
                     'Knockout 31 4r:n4'
                  ],
-                 urls: [ 
+                 urls: [
                     'http://s.npr.org/templates/css/fonts/GothamSSm.css',
                     'http://s.npr.org/templates/css/fonts/Knockout.css'
                  ]
@@ -28,7 +28,7 @@
              timeout: 10000
          });
     </script>
-        
+
     <style type="text/css">
         /* base styles */
         html { -webkit-text-size-adjust: none; }
@@ -76,7 +76,7 @@
             text-decoration: none;
         }
         a:hover, a:active { color: #bccae5; }
-        
+
 
         /* graphic */
         #graphic {
@@ -119,14 +119,14 @@
             border-bottom: 1px solid #eee;
             vertical-align: top;
         }
-        
+
         table th.amt,
         table td.amt {
             text-align: right;
         }
 
-        table tr.shadedrow { 
-            background-color: #f1f1f1; 
+        table tr.shadedrow {
+            background-color: #f1f1f1;
             color: #333;
             font-weight: bold;
         }
@@ -149,7 +149,7 @@
                 white-space: normal;
             }
             table td,
-            table td.amt { 
+            table td.amt {
                 border: none;
                 margin-bottom: 6px;
             }
@@ -170,7 +170,7 @@
                 width: 220px;
             }
 
-            table tr td:first-child { 
+            table tr td:first-child {
                 font-size: 14px;
                 margin-bottom: 6px;
                 color: #333;
@@ -188,6 +188,10 @@
 
 </head>
 <body>
+    <script type="text/javascript">
+        {% include '_analytics.js' %}
+    </script>
+    
     {% if COPY.labels.headline %}<h1>{{ COPY.labels.headline }}</h1>{% endif %}
     {% if COPY.labels.subhed %}<h2>{{ render(COPY.labels.subhed) }}</h2>{% endif %}
 
@@ -211,7 +215,7 @@
 
         </table>
     </div>
-    
+
     {% if COPY.labels.footnote %}
     <div class="footnotes">
         <h4>Notes</h4>

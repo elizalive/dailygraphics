@@ -22,7 +22,7 @@
              timeout: 10000
          });
     </script>
-        
+
     <style type="text/css">
         /* base styles */
         html { -webkit-text-size-adjust: none; }
@@ -74,11 +74,15 @@
 
 </head>
 <body>
+    <script type="text/javascript">
+        {% include '_analytics.js' %}
+    </script>
+
     {% if COPY.labels.headline %}<h1>{{ COPY.labels.headline }}</h1>{% endif %}
     {% if COPY.labels.subhed %}<h2>{{ render(COPY.labels.subhed) }}</h2>{% endif %}
 
     <div id="graphic"></div>
-    
+
     {% if COPY.labels.footnote %}
     <div class="footnotes">
         <h4>Notes</h4>

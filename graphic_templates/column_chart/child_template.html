@@ -70,7 +70,7 @@
             text-decoration: none;
         }
         a:hover, a:active { color: #bccae5; }
-        
+
         /* graph */
         #graphic {
             position: relative;
@@ -108,12 +108,12 @@
             shape-rendering: crispEdges;
         }
 
-        .bars rect { 
+        .bars rect {
             fill: #17807E;
             shape-rendering: crispEdges;
         }
-        
-        .value text { 
+
+        .value text {
             font-size: 10px;
             -webkit-font-smoothing: antialiased;
         }
@@ -123,11 +123,15 @@
 
 </head>
 <body>
+    <script type="text/javascript">
+        {% include '_analytics.js' %}
+    </script>
+    
     {% if COPY.labels.headline %}<h1>{{ COPY.labels.headline }}</h1>{% endif %}
     {% if COPY.labels.subhed %}<h2>{{ render(COPY.labels.subhed) }}</h2>{% endif %}
 
     <div id="graphic"><img src="fallback.png" alt="[Chart]" class="fallback" /></div>
-    
+
     {% if COPY.labels.footnote %}
     <div class="footnotes">
         <h4>Notes</h4>
