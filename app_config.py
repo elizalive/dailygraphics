@@ -21,7 +21,7 @@ ASSETS_SLUG = PROJECT_SLUG
 
 # The name of the repository containing the source
 REPOSITORY_NAME = 'dailygraphics'
-REPOSITORY_URL = 'git@github.com:nprapps/%s.git' % REPOSITORY_NAME
+REPOSITORY_URL = 'git@github.com:elizalive/%s.git' % REPOSITORY_NAME
 REPOSITORY_ALT_URL = None # 'git@bitbucket.org:nprapps/%s.git' % REPOSITORY_NAME'
 
 # Path to the folder containing the graphics
@@ -53,17 +53,17 @@ authomatic = Authomatic(authomatic_config, os.environ.get('AUTHOMATIC_SALT'))
 DEPLOYMENT
 """
 PRODUCTION_S3_BUCKET = {
-    'bucket_name': 'apps.npr.org',
+    'bucket_name': 'apps.decodedc.com',
     'region': 'us-east-1'
 }
 
 STAGING_S3_BUCKET = {
-    'bucket_name': 'stage-apps.npr.org',
+    'bucket_name': 'stage-apps.decodedc.com',
     'region': 'us-east-1'
 }
 
 ASSETS_S3_BUCKET = {
-    'bucket_name': 'assets.apps.npr.org',
+    'bucket_name': 'assets.apps.decodedc.com',
     'region': 'us-east-1'
 }
 
@@ -74,9 +74,9 @@ ASSETS_MAX_AGE = 300
 ANALYTICS
 """
 
-GOOGLE_ANALYTICS = {
-    'ACCOUNT_ID': 'UA-5828686-75'
-}
+# GOOGLE_ANALYTICS = {
+#     'ACCOUNT_ID': 'UA-5828686-75'
+# }
 
 # These variables will be set at runtime. See configure_targets() below
 S3_BUCKET = None
